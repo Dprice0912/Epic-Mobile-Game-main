@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food
   - Danger
+  - Carrot
   layers:
   - Default
   - TransparentFX
