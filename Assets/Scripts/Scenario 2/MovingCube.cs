@@ -6,6 +6,7 @@ using UnityEngine;
 public class MovingCube : MonoBehaviour
 {
     public static MovingCube CurrentCube {  get; private set; }
+    public static MovingCube LastCube { get; private set; }
 
     [SerializeField]
     private float moveSpeed = 1f;
@@ -18,6 +19,7 @@ public class MovingCube : MonoBehaviour
     internal void Stop()
     {
         moveSpeed = 0;
+        float hangover = transform.position.z - LastCube.transform.position.z;
     }
 
     private void Update()
